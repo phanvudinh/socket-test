@@ -3,6 +3,8 @@ import { StackNavigator, DrawerNavigator } from 'react-navigation';
 import Home from '../screens/Home';
 import Socket from '../screens/Socket';
 import MyCamera from '../screens/MyCamera';
+import MyAudio from '../screens/MyAudio';
+import User from '../screens/User';
 
 const DrawerScreen = DrawerNavigator(
     {
@@ -11,6 +13,12 @@ const DrawerScreen = DrawerNavigator(
         },
         MyCamera: {
             screen: MyCamera
+        },
+        MyAudio: {
+            screen: MyAudio
+        },
+        User: {
+            screen: User
         }
     },
     {
@@ -38,6 +46,18 @@ export default StackNavigator(
             screen: MyCamera,
             navigationOptions: {
                 headerTitle: 'MyCamera'
+            }
+        },
+        MyAudio: {
+            screen: MyAudio,
+            navigationOptions: {
+                headerTitle: 'MyAudio'
+            }
+        },
+        User: {
+            screen: User,
+            navigationOptions: {
+                headerTitle: 'User'
             }
         },
         DrawerScreen: {
